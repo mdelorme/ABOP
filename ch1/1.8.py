@@ -173,6 +173,9 @@ elif case_id == 4:
   system = System(omega, rules, ignore)
   delta = 22.5 * np.pi / 180.0
   ngen = 26
+else:
+  print('Error ! Case id should be an integer in [0, 4]')
+  exit(0)
 
 canvas = scene.SceneCanvas(keys='interactive',
                            bgcolor='white',
@@ -220,11 +223,10 @@ Hlx = Lx // 2
 Hly = Ly // 2
 
 Hl = Hlx if Lx > Ly else Hly
-r = (bary[0]-Hl, bary[1]-Hl, bary[0]+Hl, bary[1]+Hl)
+r = (bary[0]-Hl, bary[1]-Hl, 2.0*Hl, 2.0*Hl)
 l = scene.visuals.Line(lines, color='black', connect='segments', width=2)
 view.add(l)
 view.camera = scene.PanZoomCamera(rect=r, aspect=1.0)
-view.camera.center = tuple(bary)
 
 writer = imageio.get_writer('img_1.8_{}.png'.format(case_id))
 im = canvas.render()

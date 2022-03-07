@@ -17,6 +17,10 @@ cases = [('F', {'F':'F[+F]F[-F]F'},   5, 25.7),
          ('X', {'X':'F-[[X]+X]+F[+FX]-X', 'F':'FF'}, 5, 22.5)
 ]
 
+if case_id > 5:
+    print('Error ! Case id should be an integer in [0, 5]')
+    exit(0)
+
 omega, rules, ngen, delta = cases[case_id]
 delta = np.pi / 180.0 * delta
     

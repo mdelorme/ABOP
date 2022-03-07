@@ -6,6 +6,8 @@ from vispy import scene
 from vispy.visuals.transforms import STTransform
 import numpy as np
 
+import imageio
+
 omega = 'A'
 rules = {'A':'B-F+CFC+F-D&F^D-F+&&CFC+F+B//',
          'B':'A&F^CFB^F^D^^-F-D^|F^B|FC^F^A//',
@@ -73,6 +75,12 @@ bary /= pts.shape[0]
 view.add(tube)
 view.camera = scene.TurntableCamera()
 view.camera.center = bary
+
+
+writer = imageio.get_writer('img_1.5.png')
+im = canvas.render()
+writer.append_data(im)
+writer.close()
         
 if __name__ == '__main__' and sys.flags.interactive == 0:
     canvas.app.run()
