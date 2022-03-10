@@ -1,4 +1,4 @@
-# ABOP
+# The Algorithmic Beauty Of Plants Figure generator
 Python implementation of algorithms reproducting the pictures from the Algorithmic Beauty of Plants
 The original book can be found freely here : [http://algorithmicbotany.org/papers/#abop](http://algorithmicbotany.org/papers/#abop)
 
