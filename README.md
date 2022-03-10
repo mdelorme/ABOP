@@ -29,6 +29,26 @@ This allows you to use L-Systems to plot in a plane or in space structures.
 This repository stores plotting routines used to reproduce the figures of the book.
 The simplest way to see the images is to call the bash-script at the root of the project `./plot_everything.sh`.
 
+## Dependencies
+
+To run the code you will require the following python libraries : 
+
+```
+numpy 
+vispy
+imageio
+```
+
+It is needless to say that this code is written in Python 3.
+
+Tested versions are : 
+```
+Python 3.8.10
+numpy 1.20.0
+vispy 0.9.4
+imageio 2.9.0
+```
+
 The images generated are the following :
 
 ## Chapter 1
