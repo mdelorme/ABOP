@@ -72,3 +72,10 @@ The images generated are the following :
 
 ### Section 1.10
 ![Section 1.10](/figs/mosaic_1.10.png)
+
+### Chapter 2
+#### Image 2.6
+![Image 2.6](/figs/mosaic_2.6.png)
+
+#### Image 2.7
+![Image 2.7](/figs/mosaic_2.7.png)
